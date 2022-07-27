@@ -1,0 +1,162 @@
+html {
+	height: 100%;
+	width: 1000px;
+	background-color: rgb(48, 139, 177);
+	background-image:		
+		url('https://78.media.tumblr.com/cae86e76225a25b17332dfc9cf8b1121/tumblr_p7n8kqHMuD1uy4lhuo1_540.png'), 
+		url('https://78.media.tumblr.com/66445d34fe560351d474af69ef3f2fb0/tumblr_p7n908E1Jb1uy4lhuo1_1280.png'),
+		url('https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png'),
+		url('https://78.media.tumblr.com/5ecb41b654f4e8878f59445b948ede50/tumblr_p7n8on19cV1uy4lhuo1_1280.png'),
+		url('https://78.media.tumblr.com/28bd9a2522fbf8981d680317ccbf4282/tumblr_p7n8kqHMuD1uy4lhuo3_1280.png');
+	background-repeat: repeat-x;
+	background-position: 
+		0 -0%,
+		0 100%,
+		0 50%,
+		0 100%,
+		0 0;
+	background-size: 
+		2500px,
+		800px,
+		500px 200px,
+		1000px,
+		400px 260px;
+	animation: 100s para infinite linear;
+	}
+
+@keyframes para {
+	100% {
+		background-position: 
+			-5000px 20%,
+			-800px 95%,
+			500px 50%,
+			1000px 100%,
+			400px 0;
+		}
+	}
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    color: rgb(50, 49, 48);
+    font-family: Verdana,Tahoma, sans-serif;
+}
+
+
+
+.fpage{
+    margin: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.applicationTitle{
+    align-items: center;
+    font-size: x-large;
+    text-align: center;
+    padding-top:6%;
+    padding-bottom: 10%;
+}
+
+.centerMy{
+    margin: auto;
+    padding-bottom: 100px;
+    text-align: center;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.centerMy .faren label{
+   display: block;
+   font-size: 40px;
+   padding: 30px;
+}
+
+.centerMy .celci label{
+    display: block;
+    font-size: 40px;
+    padding: 30px;
+}
+
+.centerMy input[type=text]{
+    box-shadow:  5px 5px 10px blue, 10px 10px 10px red, 15px 15px 10px green;
+    width: 15%;
+    padding: 20px;
+    scrollbar-width: 0;
+    border-radius: 20px;
+    background-color:rgb(142, 151, 171);
+    font-weight: bold;
+    text-align: center;
+    color: rgb(12, 1, 1); 
+    text-shadow: 5px 4px 4px#62474793;
+    font-size: larger;
+    animation: moveShadow1 2s infinite;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    padding: 0px 15%;
+    text-align: center;
+}
+
+.buttons button{
+    color:rgb(66, 19, 19);
+    font-weight: bolder;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+
+/* For Desktop View */
+@media screen and (min-width: 1024px) {
+
+    .centerMy{
+        margin: auto;
+        text-align: center;
+        flex-direction: row;
+        width: auto;
+    }
+
+
+    .applicationTitle{
+       padding-bottom: 5%;
+    }
+
+    .centerMy input[type=text]{
+        width: 30%;
+    }
+
+    .buttons button {
+        margin-bottom: 50px;
+        width: 300px;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+
+}
+
+
+@keyframes moveShadow {
+    0%   { box-shadow:  5px 5px 20px blue, 10px 10px 20px red, 15px 15px 40px green;}
+    25%  { box-shadow:  -5px 5px 20px blue, -10px 10px 20px red, -15px 15px 40px green;}
+    50%  { box-shadow:  5px -5px 20px blue, 10px -10px 20px red, 15px -15px 40px green;}
+    75%  { box-shadow:  5px 5px 20px blue, 10px 10px 20px red, 15px 15px 40px green;}
+    100% { box-shadow:  -5px -5px 20px blue, -10px -10px 20px red, -15px -15px 40px green;} 
+}
+
+
+
+
+@keyframes moveShadow1 {    
+    0%   { box-shadow: -5px -5px 15px grey;}
+    25%  { box-shadow: -5px 5px 15px grey;}
+    50%  { box-shadow: 5px 5px 15px grey;}
+    75%  { box-shadow: 5px -5px 15px grey;}
+    100% { box-shadow: -5px -5px 15px grey;}
+}

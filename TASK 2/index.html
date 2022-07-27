@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A personal portfolio webpage created for the FreeCodeCamp's Responsive Web Design Certification.">
+  <title>Personal Portfolio</title>
+  <style media="screen">
+    *{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.wrapper{
+  width: 50%;
+  min-width: 570px;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  top: 170%;
+}
+.container{
+  width: 100%;
+  padding: 30px 30px 50px;
+  background-color: rgb(0, 0, 0);
+  border: 2px solid rgba(255,255,255,0.06);
+  border-radius: 10px;
+  box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+  backdrop-filter: blur(10px);
+} 
+.container *{
+  font-family: "Poppins",sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+}
+h2{
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 33px;
+  font-weight: bold;
+}
+.skills:not(:last-child){
+  margin-bottom: 20px;
+}
+.details{
+  width: 100%;
+  display: flex;  
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.bar{
+  position: relative;
+
+  border: 2px solid #18d26e;
+
+  border-radius: 20px;
+
+}
+.bar div{
+  position: relative;
+  width: 0;
+  height: 9px;
+  border-radius: 10px;
+  background-color: #18d26e;
+ 
+
+}
+#html-bar{
+  animation: html-fill 2s forwards;
+}
+@keyframes html-fill{
+  100%{
+      width: 90%;
+  }
+}
+#css-bar{
+  animation: css-fill 2s forwards;
+}
+@keyframes css-fill{
+  100%{
+      width: 75%;
+  }
+}
+#js-bar{
+  animation: js-fill 2s forwards;
+}
+@keyframes js-fill {
+  100%{
+      width: 72%;
+  }
+}
+#jQuery-bar{
+  animation: jQuery-fill 2s forwards;
+}
+@keyframes jQuery-fill{
+  100%{
+      width: 30%;
+  }
+} 
+
+  </style>
+</head>
+
+<body style="background-color:rgb(15, 15, 15);">
+
+<nav id="navbar" class="nav">
+  <ul>
+    <li>
+      <a href="#about">
+        <span class="code">&lt;</span>
+        About
+        <span class="code">&#47;&gt;</span>
+      </a>
+    </li>
+    <li>
+
+      <a href="#projects">
+        <span class="code">&lt;</span>
+        Projects
+        <span class="code">&#47;&gt;</span>
+      </a>
+
+    </li>
+    <li>
+      <a href="#contact">
+        <span class="code">&lt;</span>
+        Contact
+        <span class="code">&#47;&gt;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<section id="welcome-section">
+  <div>
+    <h1>Hello<span>,</span></h1>
+    <p id="subheading">I'm <span>Jaypalsingh Rathod</span></p>
+  </div>
+  <div>
+    <img class="welcome-img" id="desktop-only" src="images/IMG_7624.jpg" alt="A code snippet in C language">
+  </div>
+</section>
+
+<section id="about">
+  <h2>My Story:</h2>
+  <div id="about-container">
+    <div id="my-story">
+      <p>I'm an Computer Engineering student with notable experience in computer science and programming.
+        I am pursuing this course from Deogiri Institute Of Engineering And Management Studies, Aurangabad, Maharashtra.
+         I'm passionate about Arts & Design and I love creating beautiful things. 
+         I really enjoy learning new things and I'm always open to new ideas and projects.
+         I can speak English, Hindi, and Marathi languages as well.</p>
+    </div>
+    <div>
+      <a href="https://docs.google.com/document/d/1btQzbbAd06vTklufS2BSL-gJ6bdzKjX-MfZFnkM7UGg/edit?usp=sharing" class="button buttonB">Resume</a>
+    </div>
+    <div class="wrapper">
+      <div class="shape-1"></div>
+      <div class="shape-2"></div>
+      <div class="container">
+          <h2> Skills </h2>
+          <div class="skills">
+              <div class="details">
+                  <span>HTML</span>
+                  <span>90%</span>
+              </div>
+              <div class="bar">
+                  <div id="html-bar"></div>
+              </div>
+          </div>
+          <div class="skills">
+              <div class="details">
+                  <span>CSS</span>
+                  <span>75%</span>
+              </div>
+              <div class="bar">
+                  <div id="css-bar"></div>
+              </div>
+          </div>
+          <div class="skills">
+              <div class="details">
+                  <span>Python</span>
+                  <span>72%</span>
+              </div>
+              <div class="bar">
+                  <div id="js-bar"></div>
+              </div>
+          </div>
+          <div class="skills">
+              <div class="details">
+                  <span>Cloud</span>
+                  <span>30%</span>
+              </div>
+              <div class="bar">
+                  <div id="jQuery-bar"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+    <div id="interests-list">
+      <h3>Interests</h3>
+      <ul>
+        <li>Programming</li>
+        <li>App & Web Development</li>
+        <li>Machine Learning</li>
+        <li>Learning new Things</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>My Work:</h2>
+  <p>Here's a list of projects I have built .</p>
+
+  <div class="projects-grid">
+    <div class="card">
+      <div class="project-img">
+        <img src="https://codepen.io/Jaypalsingh_Rathod/pen/pogdQod?editors=1100" alt="">
+      </div>
+      <div class="desc">
+        <h3 class="project-tile">
+          <a href="https://codepen.io/Jaypalsingh_Rathod/pen/pogdQod?editors=1100">Tribute Page</a>
+        </h3>
+        <p>A tribute page dedicated to Vincent Van Gogh, built with HTML and CSS</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="project-img">
+        <img src="https://codepen.io/Jaypalsingh_Rathod/pen/JjGMdQe?editors=1100" alt="">
+      </div>
+      <div class="desc">
+        <h3 class="project-tile">
+          <a href="https://codepen.io/Jaypalsingh_Rathod/pen/JjGMdQe?editors=1100">Survey Form</a>
+        </h3>
+        <p>A survey form UI for an online course, built with HTML and CSS</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="project-img">
+        <img src="" alt="">
+      </div>
+      <div class="desc">
+        <h3 class="project-tile">
+          <a href="https://codepen.io/Jaypalsingh_Rathod/pen/gOPodNd?editors=1100">Product Landing Page</a>
+        </h3>
+        <p>A product landing page for a medication reminder app, built with HTML and CSS</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="project-img">
+        <img src="" alt="">
+      </div>
+      <div class="desc">
+        <h3 class="project-tile">
+          <a href="https://codepen.io/Jaypalsingh_Rathod/pen/GRoyejg?editors=1100">Technical Documentation Page</a>
+        </h3>
+        <p>A technical documentation page made for HTML</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="project-img">
+        <img src="" alt="">
+      </div>
+      <div class="desc">
+        <h3 class="project-tile">
+          <a href="https://github.com/Jaypalsingh-Rathod/github_recommendation_system">Github Recommendation System</a>
+        </h3>
+        <p>Github Recommendation System, built with HTML, CSS, Python, Flask.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="project-img">
+        <img src="" alt="">
+      </div>
+      <div class="desc">
+        <h3 class="project-tile">
+          <a href="https://github.com/Jaypalsingh-Rathod/audio-fingerprint-recognition/tree/main/audio-fingerprint-identifying">Audio Fingerprint Identifying</a>
+        </h3>
+        <p>Audio Fingerprint Identifying, Python, Flask, Matplotlib. Works same as shazam but needs dataset.</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="contact">
+  <h2>Let's work together</h2>
+  <p>Find me on</p>
+  <div class="contact-links">
+    <a href="https://twitter.com/_Jaypalsingh" target="_blank" class="contact-details">
+      <img src="images/twitter.svg" alt="twitter logo" class="contact-icon">Twitter</a>
+    <a href="https://www.linkedin.com/in/jaypalsingh-rathod-04386012b/" target="_blank" class="contact-details">
+      <img src="images/linkedin.svg" alt="linkedin logo" class="contact-icon">LinkedIn</a>
+    <a href="https://github.com/Jaypalsingh-Rathod" target="_blank" class="contact-details">
+      <img src="images/github.svg" alt="github logo" class="contact-icon">GitHub</a>
+    <a id="profile-link" href="https://www.freecodecamp.org/jaypalsingh_rathod" target="_blank" class="contact-details">
+      <img src="images/freecodecamp.svg" alt="freeCodeCamp logo" class="contact-icon">freeCodeCamp</a>
+    <a href="https://codepen.io/Jaypalsingh_Rathod" class="contact-details">
+      <img src="images/codepen.svg" alt="CodePen logo" class="contact-icon">Codepen</a>
+  </div>
+</section>
+
+<footer>
+  <p>
+    <span class="code">&lt;</span>
+    <span class="code">&#47;&gt;</span>
+    with
+    <span class="heart"></span>
+    by Jaypalsingh
+  </p>
+</footer>
+
+</body>
+
+</html>
